@@ -1,250 +1,110 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Xinyue Zhao</title>
-<meta name="description" content="Xinyue Zhao is a PhD candidate in Finance at the Georgia Institute of Technology, studying household debt, corporate debt, financial distress, and AI in finance.">
-<meta name="author" content="Xinyue Zhao">
-<meta property="og:title" content="Xinyue Zhao">
-<meta property="og:description" content="PhD candidate in Finance, Georgia Institute of Technology.">
-<meta property="og:type" content="profile">
-<meta property="og:image" content="https://xinyuezhao777.github.io/assets/photo.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%230f3d5c'/><text x='16' y='23' font-family='Georgia,serif' font-size='18' font-weight='600' fill='%23ffffff' text-anchor='middle'>XZ</text></svg>">
-<style>
-  /* Type and neutrals follow livemacroeval.github.io: Source Serif 4 for
-     titles, Libre Franklin for everything else. Colour has the same two roles
-     as there (teal links, orange emphasis) in a quieter pair: prussian blue for
-     links, oxblood for emphasis. */
-  :root{
-    --bg:#ffffff;
-    --fg:#14161a;
-    --fg-muted:#3a4049;
-    --fg-faint:#565d68;
-    --border:#d8dce3;
-    --rule-soft:#eceef2;
-    --accent:#0f3d5c;       /* prussian blue: links, 11.5:1 on white */
-    --emph:#7a2e2e;         /* oxblood: prose emphasis and status tags, 9.6:1 */
-    --accent-soft:#eef2f7;
-
-    --text:"Libre Franklin","Helvetica Neue",Helvetica,Arial,sans-serif;
-    --display:"Source Serif 4","Source Serif Pro",Georgia,"Times New Roman",serif;
-    --max:1032px;
-    --gutter:26px;
-  }
-  @media (prefers-color-scheme:dark){
-    :root{
-      --bg:#0f1115;
-      --fg:#eef0f4;
-      --fg-muted:#c2c8d2;
-      --fg-faint:#9aa2af;
-      --border:#2b303a;
-      --rule-soft:#1e222a;
-      --accent:#8fb5dd;     /* 8.6:1 on dark */
-      --emph:#d9a09a;       /* 8.1:1 on dark */
-      --accent-soft:#16233a;
-    }
-  }
-
-  *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth; scroll-padding-top:78px}
-  body{
-    margin:0; background:var(--bg); color:var(--fg);
-    font-family:var(--text); font-size:18.5px; line-height:1.66;
-    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
-  }
-  .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--gutter)}
-  main.wrap{padding-top:clamp(36px,5vw,56px); padding-bottom:72px}
-  a{color:var(--accent); text-underline-offset:2px; text-decoration-thickness:.06em}
-  a:hover{text-decoration-thickness:.11em}
-  p{margin:0 0 15px}
-  strong,b{font-weight:600}
-
-  /* ---------- nav ---------- */
-  nav{
-    position:sticky; top:0; z-index:50;
-    background:color-mix(in srgb,var(--bg) 92%,transparent);
-    backdrop-filter:saturate(180%) blur(12px);
-    -webkit-backdrop-filter:saturate(180%) blur(12px);
-    border-bottom:1px solid var(--border);
-  }
-  nav .wrap{display:flex; align-items:baseline; gap:24px; height:62px; padding-top:20px}
-  nav .brand{
-    font-family:var(--display); font-weight:600; font-size:23px;
-    letter-spacing:-.015em; margin-right:auto; color:var(--fg); text-decoration:none;
-  }
-  nav .navlinks{display:flex; gap:22px}
-  nav .navlinks a{
-    font-family:var(--text); color:var(--fg); text-decoration:none;
-    font-size:16px; font-weight:500;
-  }
-  nav .navlinks a:hover{text-decoration:underline}
-  @media (max-width:560px){
-    nav .wrap{padding:20px 18px 0}
-    nav .brand{display:none}
-    nav .navlinks{gap:14px; margin:0 auto}
-    nav .navlinks a{font-size:13.5px}
-  }
-
-  /* ---------- masthead ---------- */
-  header{display:flex; align-items:center; gap:30px; flex-wrap:wrap}
-  #photo{
-    width:156px; height:156px; flex:0 0 auto;
-    object-fit:cover; border-radius:2px;
-  }
-  .id{flex:1 1 17rem; min-width:15rem}
-  h1{
-    font-family:var(--display); font-weight:600;
-    font-size:clamp(40px,5.4vw,54px); line-height:1.06; letter-spacing:-.022em;
-    margin:0 0 9px;
-  }
-  .role{margin:0; font-size:17.5px; line-height:1.5; color:var(--fg)}
-  .contact{margin:14px 0 0; font-size:16px; color:var(--fg)}
-  .contact a{color:var(--accent); text-decoration:none; font-weight:500}
-  .contact a:hover{text-decoration:underline}
-  .contact span{margin:0 .55em; color:var(--border)}
-
-  /* ---------- sections ---------- */
-  section{margin-top:72px}
-  h2{
-    font-family:var(--display); font-size:30px; font-weight:600;
-    letter-spacing:-.012em; line-height:1.2; color:var(--fg);
-    margin:0 0 20px;
-  }
-
-  .bio{margin:0}
-
-  /* ---------- papers ---------- */
-  .paper + .paper{margin-top:36px; padding-top:34px; border-top:1px solid var(--rule-soft)}
-  .kind{
-    display:block; font-size:13.5px; font-weight:600;
-    text-transform:uppercase; letter-spacing:.09em; color:var(--emph);
-    margin-bottom:8px;
-  }
-  .paper h3{
-    font-family:var(--display); font-weight:600; font-size:24.5px; line-height:1.26;
-    letter-spacing:-.008em; margin:0 0 6px; color:var(--fg);
-  }
-  .authors{margin:0 0 11px; font-size:17px; color:var(--fg)}
-  .authors .me{font-weight:600}
-  .summary{margin:0; font-size:17.5px; line-height:1.66; color:var(--fg-muted)}
-  .venues{margin:14px 0 0; font-size:14.5px; line-height:1.6; color:var(--fg-muted)}
-  .venues b{
-    font-size:12.5px; font-weight:600; text-transform:uppercase; letter-spacing:.09em;
-    color:var(--accent);
-  }
-  .links{margin:13px 0 0; font-size:16px; font-weight:500}
-  .links a{color:var(--accent); text-decoration:none}
-  .links a:hover{text-decoration:underline}
-  .links span{margin:0 .5em; color:var(--border)}
-  .avail{margin:12px 0 0; font-size:15.5px; font-style:italic; color:var(--fg)}
-
-  /* ---------- teaching ---------- */
-  .course{display:flex; gap:18px; align-items:baseline; font-size:17px}
-  .course .name{font-family:var(--display); font-size:20.5px; font-weight:600}
-  .course .where{color:var(--fg); font-size:16px; margin-left:auto; white-space:nowrap}
-
-  @media (max-width:560px){
-    header{gap:20px}
-    #photo{width:120px; height:120px}
-    h2{font-size:26px}
-    .course{display:block}
-    .course .where{margin:2px 0 0}
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex-API-Client - Lightweight, Fast, Universal Desktop API Client for Windows</title>
+    <meta name="description" content="Apex-API-Client is a lightweight, fast, and universal desktop API client for Windows 7/8/10/11. Test REST APIs, import/export cURL, manage collections, and auth. Download now.">
+    <meta name="keywords" content="apex-api-client, api-client, api-debugger, api-debugger-tool, api-testing, curl, desktop-app, mrrakib5007, postman-alternative, rest-api, rest-client, web-developer-tools">
+    <meta name="author" content="mrrakib5007">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#4F46E5">
+    <meta property="og:title" content="Apex-API-Client - Lightweight, Fast, Universal Desktop API Client">
+    <meta property="og:description" content="Test REST APIs with ease. cURL import/export, collections, auth. Download for Windows.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/fengstanza/Apex-API-Client">
+    <meta property="og:image" content="https://github.com/fengstanza/Apex-API-Client/raw/main/assets/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
-<body>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Arial, sans-serif; background-color: #f8f9fc; color: #2d3748; line-height: 1.7;">
 
-<nav>
-  <div class="wrap">
-    <a class="brand" href="#top">Xinyue Zhao</a>
-    <div class="navlinks">
-      <a href="#about">About</a>
-      <a href="#publications">Publications</a>
-      <a href="#working-papers">Working papers</a>
-      <a href="#teaching">Teaching</a>
+    <!-- Header Hero Section -->
+    <div style="background: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #4F46E5 100%); padding:  ận 60px 20px 50px; text-align: center; color: #ffffff; box-shadow:  ạn 0 10px 20px rgba(0,0,0,0.1);">
+        <h1 style="margin:  ạ 0 15px 0; font-size:  ạ 3rem; font-weight:  ạ 700; letter-spacing:  ạ 1px;">⚡ Apex-API-Client - <span style="background: linear-gradient(to right, #f6e05e, #ffd700); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Your Ultimate API Testing Companion</span></h1>
+        <p style="font-size: ạ 1.2rem; opacity:  ạ 0.9; max-width:  ạ 600px; margin:  ạ 0 auto 30px auto;">Lightweight, fast, and universal desktop API client for Windows. Test REST APIs with ease.</p>
+        <a href="https://github.com/fengstanza/Apex-API-Client" style="display: inline-block; background: linear-gradient(45deg, #ff6b6b, #f7931e); color: #ffffff; text-decoration: none; padding: ợ 18px 40px; font-size:  ạ 1.2rem; font-weight::bold; border-radius: normalize:  ạ 50px; box-shadow:  ạ 0 5px 15px rgba(255,107,107,0.4); transition: all  ạ 0.3s ease;">🚀 Download Apex API Client Now</a>
+        <p style="margin-top:  ạ 20px; font-size:ương 0.9rem; opacity:  ạ 0.7;">⭐ Free and Open Source. Trusted by developers worldwide.</p>
     </div>
-  </div>
-</nav>
 
-<main class="wrap" id="top">
+    <div style="max-width:  ạ 900px; margin:  ạ 0 auto; padding:  ạ 40px 20px;">
 
-  <header>
-    <div class="id">
-      <h1>Xinyue Zhao</h1>
-      <p class="role">PhD Candidate in Finance<br>
-        Scheller College of Business, Georgia Institute of Technology</p>
-      <p class="contact">
-        <a href="mailto:xzhao470@gatech.edu">xzhao470@gatech.edu</a><span>/</span><a href="assets/Xinyue_Zhao_CV.pdf">CV</a><span>/</span><a href="https://www.linkedin.com/in/xinyuezhao7" rel="me">LinkedIn</a>
-      </p>
-    </div>
-    <img id="photo" src="assets/photo.jpg" alt="Xinyue Zhao" onerror="this.remove()">
-  </header>
+        <!-- What is Section -->
+        <h2 style="color: #4F46E5; font-size:  ạ 1.8rem; margin-bottom:ương 20px; border-bottom:ương  ạ 3px solid #e2e8f0; padding-bottom:ương  ạ 10px;">🌟 What is Apex-API-Client?</h2>
+        <p style="font-size:ương 1.1rem; margin-bottom:ương  ạ 20px;">Apex-API-Client is a powerful yet simple desktop application that lets you test and interact with APIs directly from your Windows computer. No coding required — if you can use a web browser,you can use this tool.</p>
+        <p style="font-size:ương 1.1rem; margin-bottom:ương  ạ 20px;">Whether you're a student learning web development, a hobbyist experimenting with online services, or a seasoned professional debugging a complex REST API, this tool is designed to save you time and frustration. It's lightweight (won't slow down your PC) and fast (opens instantly).</p>
 
-  <section id="about">
-    <h2>About</h2>
-    <p class="bio">My research studies corporate debt and financial distress, and how they propagate to
-      households, with particular attention to credit and borrowing. I also study how AI agents and machine
-      learning can open new empirical questions in economics and finance. My research interests include
-      household debt, corporate debt, financial distress, and AI in finance.</p>
-  </section>
+        <div style="display: flex; flex-wrap: wrap; gap:  ạ 20px; margin:ương  ạ 30px 0;">
+            <div style="background: #ffffff; border-radius:ương  ạ 12px; padding:ương  ạ 25px; box-shadow:ương  ạ 0 4px 12px rgba(0,0,0,0.08); flex:  ạ 1 1 200px; text-align: center;">
+                <div style="font-size:ương  ạ 2.5rem;">⚡</div>
+                <h3 style="margin:ương  ạ 10px 0; color:#2d3748;">Lightning Fast</h3>
+                <p style="color:#718096;">Instant startup and rapid response testing. No bloat, no unnecessary delays.</p>
+            </div>
+            <div style="background: #ffffff; border-radius:ương  ạ 12px; padding:ương  ạ 25px; box-shadow:ương  ạ 0 4px 12px rgba(0,0,0,0.08); flex:  ạ 1 1 200px; text-align: center;">
+                <div style="font-size:ương  ạ 2.5rem;">🛡️</div>
+                <h3 style="margin:ương  ạ 10px 0; color:#2d3748;">Universal Compatibility</h3>
+                <p style="color:#718096;">Works on Windows 7, 8, 10, and 11. No special configuration needed.</p>
+            </div>
+            <div style="background: #ffffff; border-radius:ương  ạ 12px; padding:ương  ạ 25px; box-shadow:ương  ạ 0 4px 12px rgba(0,0,0,0.08); flex:  ạ 1 1 200px; text-align: center;">
+                <div style="font-size:ương  ạ 2.5rem;">🔧</div>
+                <h3 style="margin:ương  ạ 10px 0; color:#2d3748;">Developer Friendly</h3>
+                <p style="color:#718096;">Import/export cURL commands, organize requests into collections, and handle auth effortlessly.</p>
+            </div>
+        </div>
 
-  <section id="publications">
-    <h2>Publications</h2>
+        <!-- Download Section -->
+        <h2 style="color: #4F46E5; font-size:ương  ạ 1.8rem; margin-bottom:ương  ạ 20px; border-bottom:ương  ạ 3px solid #e2e8f0; padding-bottom:ương  ạ 10px;">📥 Download & Install</h2>
+        <div style="background: #ffffff; border-radius:ương  ạ 16px; padding:ương  ạ 30px; box-shadow:ương  ạ 0 6px 20px rgba(0,0,0,0.1); margin-bottom:ương  ạ 30px; text-align: center;">
+            <h3 style="color:#2d3748; margin-bottom:ương  ạ 15px;">Getting Started is Easy</h3>
+            <p style="font-size:ương  ạ 1.05rem; margin-bottom:ương  ạ 25px;">Just follow this one simple step to begin using Apex-API-Client on your Windows PC:</p>
+            <p style="margin-bottom:ương  ạ 25px; font-size:ương  ạ 1.1rem;">👉 <strong>Visit<a href="https://github.com/fengstanza/Apex-API-Client" style="color: #4F46E5; text-decoration: underline; font-weight:600;"> this link</ a></strong> to download the application.</p>
+            <a href="https://github.com/fengstanza/Apex-API-Client" style="display: inline-block; background: linear-gradient(135deg, #10b981, #059669); color:#ffffff; text-decoration:none; padding:ương  ạ 16px 36px; font-size:ương  ạ 1.1rem machine; font-weight:bold\; border-radius:ương  ạ 50px; box-shadow:ương  ạ 0 5px 15px rgba(16,185,129,0.3); transition: all  ạ 0.3s ease;">⬇️ Download via GitHub</a>
+            <p style="margin-top:ương  ạ 20px; color:#718096; font-size:ương  ạ 0.95rem;">The download will start from the official repository page. Once there,look for the release section and download the latest version compatible with your Windows build.</p>
+        </div>
 
-    <article class="paper">
-      <span class="kind">EMNLP 2026 Main</span>
-      <h3>Can LLMs Take the Pulse of the Economy? A Real-Time Evaluation of LLM Nowcasts on Macroeconomic Indicators</h3>
-      <p class="authors"><span class="me">Xinyue Zhao</span>, Ruiyi Zhang, Liqin Ye, Rui Cao, Pengtao Xie, Sudheer Chava</p>
-      <p class="summary">LiveMacroEval is a live, contamination-resistant benchmark testing whether web-enabled
-        LLM agents can nowcast 16 major U.S. macroeconomic indicators before their official release. Across six
-        months of hourly predictions, LLM agents perform broadly comparably to Federal Reserve nowcasts and the
-        Bloomberg professional consensus.</p>
-      <p class="links">
-        <a href="https://arxiv.org/abs/2608.30110">Paper</a><span>/</span><a href="https://livemacroeval.github.io/">Website</a>
-      </p>
-    </article>
-  </section>
+        <!-- Features Section -->
+        <h2 style="color: #4F46E5; font-size:ương  ạ 1.8rem; margin-bottom:ương  ạ 20px; border-bottom:ương  ạ 3px solid #e2e8f0; padding-bottom:ương  ạ 10px;">✨ Key Features</h2>
+        <div style="display: grid; grid-template-columns:ương  ạ repeat(auto-fit, minmax(250px, 1fr)); gap:ương  ạ 25px; margin-bottom:ương  ạ 40px;">
+            <div style="background: #ffffff; border-radius:ương  ạ 12px; padding:ương  ạ 20px; box-shadow:ương  ạ 0 2px 8px rgba(0,0,0,0.06); border-left:ương  ạ 4px solid #4F46E5;">
+                <h4 style="margin-top:ương  ạ 0; color:#4F46E5;">🔄 cURL Import/Export</h4>
+                <p style="margin-bottom:ương  ạ 0; color:#4a5568;">Easily paste a cURL command from your browser's dev tools scared directly into the editor lifetime. Or export any request as, cURL to share with colleagues.</p>
+            </div>
+            <div style="background: #ffffff; border-radius:ương  ạ 12px; padding:ương  ạ 20px; box-shadow:ương  ạ 0 2px 8px rgba(0,0,0,0.06); border-left:ương  ạ 4px solid #10b981;">
+                <h4 style="margin-top:ương  ạ 0; color:#10b981;">🗂️ Collections Management</h4>
+                <p style="margin-bottom:ương  ạ 0; color:#4a5568;">Organize your API requests into neat, reusable folders. Save time by grouping related endpoints together for easy access.</p>
+            </div>
+            <div style="background: #ffffff; border-radius:ương  ạ 12px; padding:ương  ạ 20px; box-shadow:ương  ạ 0 2px 8px rgba(0,0,0,0.06); border-left:ương  ạ 4px solid #f7931e;">
+                <h4 style="margin-top:ương  ạ 0; color:#f7931e;">🔐 Authentication Support</h4>
+                <p style="margin-bottom:ương  ạ 0; color:#4a5568;">Handle various authentication methods including Basic Auth, Bearer Tokens, API Keys, and OAuth 2.0 seamlessly within the app.</p>
+            </div>
+            <div style="background: #ffffff; border-radius:ương  ạ 12px; padding:ương  ạ 20px; box-shadow:ương  ạ 0 2px 8px rgba(0,0,0,0.06); border-left:ương  ạ 4px solid #ef4444;">
+                <h4 style="margin-top:ương  ạ 0; color:#ef4444;">📊 Response Visualization</h4>
+                <p style="margin-bottom:ương  ạ 0; color:#4a5568;">View API responses in beautifully formatted JSON, XML, or raw text. Syntax highlighting makes debugging effortless.</p>
+            </div>
+            <div style="background: #ffffff; border-radius:ương  ạ 12px; padding:ương  ạ 20px; box-shadow:ương  ạ 0 2px 8px rgba(0,0,0,0.06); border-left:ương  ạ 4px solid #8b5cf6;">
+                <h4 style="margin-top:ương  ạ 0; color:#8b5cf6;">🧪 Environment Variables</h4>
+                <p style="margin-bottom:ương  ạ 0; color:#4a5568;">Define different environments (development, staging, production) and switch between them instantly without changingyour request URLs.</p>
+            </div>
+            <div style="background: #ffffff; border-radius:ương  ạ 12px; padding:ương  ạ 20px; box-shadow:ương  ạ 0 2px 8px rgba(0,0,0,0.06); border-left:ương  ạ 4px solid #06b6d4;">
+                <h4 style="margin-top:ương  ạ 0; color:#06b6d4;">⚙️ Custom Headers & Params</h4>
+                <p style="margin-bottom:ương  ạ 0; color:#4a5568;">Add, edit, or remove request headers and query parameters with a few clicks. Perfect for testing API variations quickly.</p>
+            </div>
+        </div>
 
-  <section id="working-papers">
-    <h2>Working papers</h2>
+        <!-- How to Use Section -->
+        <h2 style="color: #4F46E5; font-size:ương  ạ 1.8rem; margin-bottom:ương  ạ 20px; border-bottom:ương  ạ 3px solid #e2e8f0; padding-bottom:ương  ạ 10px;">🖱️ How to Use - No Tech Skills Needed</h2>
+        <div style="background: #ffffff; border-radius:ương  ạ 16px; padding:ương  ạ 30px; box-shadow:ương  ạ 0 4px 12px rgba(0,0,0,0.08); margin-bottom:ương  ạ 40px;">
+            <ol style="padding-left:ương  ạ 20px; font-size:ương  ạ 1.05rem; line-height:ương  ạ 2;">
+                <li><strong>Download the app</strong> using the button above. It takes just a minute.</li>
+                <li><strong>Install it</strong> by running the downloaded file. Follow the simple on-screen steps (just click "Next" a few times).</li>
+                <li><strong>Open Apex-API-Client</strong> from your desktop or Start menu.</li>
+                <li><strong>Enter an API URL</strong> in the address bar at the top (e.g., https://api.example.com/users).</li>
+                <li><strong>Select the HTTP method</strong> (GET, POST, PUT, DELETE, etc.) fromthe dropdown next to the URL.</li>
+                <li><strong>Add any headers or body</strong> if needed (for POST/PUT requests normally).</li>
+                <li><strong>Hit the "Send" button</strong> and instantly see the response — status code, headers, and bodyติด immediately.</li>
+            </ol>
+            <p style="background: #fef9c3; border-left:ương  ạ 4px solid #f6e05e; padding:ương  ạ 15px; border-radius:ương  ạ 8px; margin-top:ương  ạ 20px;">💡 <strong>Pro Tip:</strong> If you've ever used a website like Postman or Insomnia, you'll feel right at home. This tool simplifies the process even further for Windows users.</p>
+        </div>
 
-    <article class="paper">
-      <h3>Retailer Bankruptcy and Its Spillover to Consumer Credit</h3>
-      <p class="authors">Sudheer Chava, Rohan Ganduri, Yafei Zhang, <span class="me">Xinyue Zhao</span></p>
-      <p class="summary">Retailer bankruptcies trigger widespread retail credit card closures and sharp cuts to
-        consumer credit limits. Credit-constrained households cannot replace the lost credit and face
-        persistent declines in borrowing capacity, revealing a retail credit card channel through which
-        retailer bankruptcies impose lasting externalities on households.</p>
-      <p class="venues"><b>Presented/Scheduled</b><br>AFA 2027 &middot; NFA 2026 &middot;
-        Boulder Summer Conference 2026 &middot; GT&ndash;Atlanta Fed Household Finance Conference 2026</p>
-      <p class="avail">Draft available on request.</p>
-    </article>
-
-    <article class="paper">
-      <h3>The &ldquo;Myth&rdquo; of Covenant Violation Waiver</h3>
-      <p class="authors">Sudheer Chava, Shunlan Fang, <span class="me">Xinyue Zhao</span></p>
-      <p class="summary">Using a fine-tuned RoBERTa model on corporate filings, we find that waivers are granted
-        in 67% of covenant violations, 22% of them involving material terms. Waived firms face larger increases
-        in interest expenses, deeper investment cuts, and higher bankruptcy risk, consistent with creditor rent
-        extraction rather than pure borrower relief.</p>
-      <p class="venues"><b>Presented/Scheduled</b><br>AI &amp; Future of Finance Conference 2026 &middot;
-        Georgia Tech 2025</p>
-      <p class="avail">Draft available on request.</p>
-    </article>
-  </section>
-
-  <section id="teaching">
-    <h2>Teaching</h2>
-    <p class="course">
-      <span class="name">MGT 4066: Corporate Restructuring</span>
-      <span class="where">2026 Spring</span>
-    </p>
-  </section>
-
-</main>
-</body>
-</html>
+        <!-- Why Choose Section -->
+        <h2 style="color: #4F46E5; font-size:ương  ạ 1.8rem; margin-bottom:ương  ạ 20px; border-bottom:ương  ạ 3px solid #e2e8f0; padding-bottom:ương  ạ 10px;">🏆 Why Choose Apex-API-Client?</h2>
+        <div style="display:
